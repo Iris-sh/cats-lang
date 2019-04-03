@@ -394,6 +394,8 @@ Z128
 умолчанию
 
 случай
+
+перейди на
 \end{multicols}
 
 Примеры идентификаторов: \texttt{Котик}, \texttt{Гав}, \texttt{_1998I}, \texttt{Киса_Люся}, \texttt{Мусенька}.    
@@ -1365,29 +1367,16 @@ $\texttt{A\#}1=0$, $\texttt{B[3]\#}0=11$, $\texttt{C\#}0=17$, $\texttt{C\#}1=8$,
 
 
 
- \subsection{Оператор-переключатель}
- Оператор-переключатель предназначен для выбора одного из нескольких альтернативных путей выполнения программы. Вычисление оператора-переключателя начинается с вычисления выражения, после чего управление передается оператору, помеченному константным выражением, равным вычисленному значению выражения. Выход из оператора-переключателя осуществляется оператором 'выход'. Если значение выражения не равно ни одному константному выражению, то управление передается оператору, помеченному ключевым словом 'умолчание', если он есть.
-
+ \subsection{Оператор - перейди на}
+ перейди на — оператор безусловного перехода (перехода к определённой точке программы, обозначенной номером строки либо меткой).
+Метка 'перейди на' – определенный пользователем идентификатор. Метка ставится перед инструкцией, на которую можно перейти с помощью 'перейди на', и должна заканчиваться двоеточием.\\
 
 \noindent\textcolor{Green}{\syntax{%
-
-\textcolor{Black}{\textbf{переключи}}\textcolor{Black}{\texttt{(}}\textcolor{Black}{ (<выражение>)} \textcolor{Black}{\texttt{)}}%
-\textcolor{Black}{\texttt{\{}}\\
-\phantom{конец}\textcolor{Black}{\textbf{случай }}\textcolor{Black}{\texttt{<}}\synt{константное выражение 1}\textcolor{Black}{\texttt{>}} \textcolor{Black}{\texttt{:}} \textcolor{Black}{\texttt{<}}\textcolor{Black}{операторы 1>   }\textcolor{Black}{\texttt{>}}\\
-\phantom{конец}\textcolor{Black}{\textbf{случай }}\textcolor{Black}{\texttt{<}}\synt{константное выражение 2}\textcolor{Black}{\texttt{>}} \textcolor{Black}{\texttt{:}} \textcolor{Black}{\texttt{<}}\textcolor{Black}{операторы 2>   }\textcolor{Black}{\texttt{>}}\\
-\phantom{конец}\textcolor{Black}{\textbf{... }}\\
+\textcolor{Black}{\textbf{перейди на}} 
+\textcolor{Green}{ (Имя метки)} \textcolor{Black}{\textbf{;}} % 
 \\
-\\
-\phantom{конец}\textcolor{Black}{\textbf{... }}\\
-\phantom{конец}\textcolor{Black}{\textbf{случай }}\textcolor{Black}{\texttt{<}}\synt{константное выражение N}\textcolor{Black}{\texttt{>}} \textcolor{Black}{\texttt{:}} \textcolor{Black}{\texttt{<}}\textcolor{Black}{операторы N>   }\textcolor{Black}{\texttt{>}}\\
-\phantom{конец}\textcolor{Black}{\texttt{[}}\synt{умолчанию }\textcolor{Black}{\texttt{:}} \textcolor{Black}{\texttt{<}}\textcolor{Black}{операторы   }\textcolor{Black}{\texttt{>}}\textcolor{Black}{\texttt{]}}\\
-\textcolor{Black}{\texttt{\}}}\\
+\phantom{конец}\textcolor{Green}{\textbf{Имя метки: }}\\
 }}
-
-
-
-
-         
 \chapter{Стандартная библиотека}
     \section{Математические функции}
     \section{Ввод-вывод}
